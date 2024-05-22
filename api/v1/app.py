@@ -2,9 +2,12 @@
 
 """The main flask app file"""
 import sys
+
 from dotenv import load_dotenv
+
 load_dotenv()
 import os
+
 v = os.getenv('PARENTP')
 
 sys.path.extend([v])
@@ -16,9 +19,6 @@ from flask_cors import CORS
 
 from models import storage
 from views import app_views
-from dotenv import load_dotenv
-
-
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
