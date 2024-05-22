@@ -4,3 +4,4 @@ AirBnb_v3
 /__pychache__
 console.cpython-310.pyc
 .env
+.idea
