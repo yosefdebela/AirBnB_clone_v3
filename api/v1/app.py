@@ -2,11 +2,15 @@
 
 """The main flask app file"""
 
-from api.v1.views import app_views
+from os import getenv
+
 from flask import Flask, jsonify
 from flask_cors import CORS
-from os import getenv
+
 from models import storage
+from views import app_views
+
+# from ...models import storage
 
 
 app = Flask(__name__)
@@ -30,4 +34,4 @@ if __name__ == "__main__":
     host = getenv('HBNB_API_HOST', default='0.0.0.0')
     port = getenv('HBNB_API_PORT', default=5000)
 
-    app.run(host, int(port), threaded=True)
+    app.run(host, int(port), threaded=True, debug=True)
