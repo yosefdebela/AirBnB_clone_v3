@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 """The main flask app file"""
-
+import sys
+sys.path.extend(['/home/yos/stack@alx/AirBnB_clone_v3'])
+import os
 from os import getenv
 
 from flask import Flask, jsonify
@@ -9,8 +11,9 @@ from flask_cors import CORS
 
 from models import storage
 from views import app_views
-
-# from ...models import storage
+from dotenv import load_dotenv
+load_dotenv()
+sys.path.extend(os.environ['path2'])
 
 
 app = Flask(__name__)

@@ -1,5 +1,6 @@
 AirBnb_v3
 .vscode
 .idea
-__pychache__
+*__pychache__
 console.cpython-310.pyc
+.env
