@@ -8,7 +8,7 @@ import os
 v = os.getenv('PARENTP')
 
 sys.path.extend([v])
-# sys.path.extend(['/home/yos/stack@alx/AirBnB_clone_v3'])
+
 from os import getenv
 
 from flask import Flask, jsonify
